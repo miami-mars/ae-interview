@@ -5,6 +5,13 @@ class User:
 
 
 class Album:
-    def __init__(self, title, artist):
+    class Song:
+        def __init__(self, title, duration):
+            self.title = title
+            self.duration = duration
+
+
+    def __init__(self, title, artist, songs):
         self.title = title
         self.artist = artist
+        self.songs = [Album.Song(song[0], song[1]) for song in songs]
