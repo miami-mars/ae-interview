@@ -42,6 +42,10 @@ class TestUser:
         user.add_credits(dollars)
         assert user.credits == expected
 
+    @pytest.mark.parametrize("dollars", [0, -1, -100])
+    def test_user_add_credits_less_than_one(self, user, dollars): 
+        with pytest.raises(ValueError):
+            assert user.add_credits(dollars)
 
 
 class TestAlbum:

@@ -5,8 +5,7 @@ class User:
 
     def add_credits(self, dollar_amount):
         if dollar_amount < 1:
-            print("Please Enter a Whole-Number Dollar Amount!")
-            return
+            raise ValueError("Please Enter a Whole-Number Dollar Amount!")
         
         while dollar_amount != 0:
             if dollar_amount / 5 >= 1:
