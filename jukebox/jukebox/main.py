@@ -9,13 +9,11 @@ class User:
 
         while dollar_amount != 0:
             if dollar_amount / 5 >= 1:
-                (difference := dollar_amount % 5)
-                dollar_amount -= difference
+                dollar_amount -= (difference := dollar_amount % 5)
                 self.credits += (dollar_amount / 5) * 18
                 dollar_amount = difference
             if dollar_amount / 2 >= 1:
-                (difference := dollar_amount % 2)
-                dollar_amount -= difference
+                dollar_amount -= (difference := dollar_amount % 2)
                 self.credits += (dollar_amount / 2) * 7
                 dollar_amount = difference
             if dollar_amount == 1:
