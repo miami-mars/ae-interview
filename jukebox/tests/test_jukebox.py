@@ -37,6 +37,12 @@ class TestUser:
         # Assert
         assert hasattr(user, "credits")
 
+    @pytest.mark.parametrize("dollars, expected", [(1, 3), (2, 7), (3, 10), (5, 18), (8, 28), (10, 36), (21, 75)])
+    def test_user_add_credits(self, user, dollars, expected):
+        user.add_credits(dollars)
+        assert user.credits == expected
+
+
 
 class TestAlbum:
     def test_album_has_title(self, album):

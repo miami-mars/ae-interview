@@ -3,6 +3,26 @@ class User:
         self.name = name
         self.credits = 0
 
+    def add_credits(self, dollar_amount):
+        if dollar_amount < 1:
+            print("Please Enter a Whole-Number Dollar Amount!")
+            return
+        
+        while dollar_amount != 0:
+            if dollar_amount / 5 >= 1:
+                (difference := dollar_amount % 5)
+                dollar_amount -= difference
+                self.credits += (dollar_amount / 5) * 18
+                dollar_amount = difference
+            if dollar_amount / 2 >= 1:
+                (difference := dollar_amount % 2)
+                dollar_amount -= difference
+                self.credits += (dollar_amount / 2) * 7
+                dollar_amount = difference
+            if dollar_amount == 1:
+                self.credits += 3
+                dollar_amount = 0
+
 
 class Album:
     class Song:
