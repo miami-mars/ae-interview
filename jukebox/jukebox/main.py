@@ -6,7 +6,7 @@ class User:
     def add_credits(self, dollar_amount):
         if dollar_amount < 1:
             raise ValueError("Please Enter a Whole-Number Dollar Amount!")
-        
+
         while dollar_amount != 0:
             if dollar_amount / 5 >= 1:
                 (difference := dollar_amount % 5)
@@ -28,7 +28,6 @@ class Album:
         def __init__(self, title, duration):
             self.title = title
             self.duration = duration
-
 
     def __init__(self, title, artist, songs):
         self.title = title
