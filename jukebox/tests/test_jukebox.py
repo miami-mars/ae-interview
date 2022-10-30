@@ -1,4 +1,4 @@
-from jukebox.main import User
+from jukebox.main import User, Album
 import pytest
 
 
@@ -6,6 +6,11 @@ import pytest
 @pytest.fixture
 def user():
     return User("John Doe")
+
+
+@pytest.fixture
+def album():
+    return Album("American Idiot", "Green Day")
 
 
 class TestUser:
@@ -17,3 +22,13 @@ class TestUser:
     def test_user_has_credits(self, user):
         # Assert
         assert hasattr(user, "credits")
+
+
+class TestAlbum:
+    def test_album_has_title(self, album):
+        # Assert
+        assert hassattr(album, "title")
+
+    def test_album_has_artist(self, album):
+        # Assert
+        assert hassattr(album, "artist")
