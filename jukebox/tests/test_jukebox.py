@@ -27,8 +27,8 @@ class TestUser:
 class TestAlbum:
     def test_album_has_title(self, album):
         # Assert
-        assert hassattr(album, "title")
+        assert hasattr(album, "title")
 
     def test_album_has_artist(self, album):
         # Assert
-        assert hassattr(album, "artist")
+        assert hasattr(album, "artist")
