@@ -8,6 +8,14 @@ My goal is to show you my process through the git history.
 Since I'm doing this on a weekend, I'm going to answer my own questions.
 Normally, I'd ask the team or go through a brainstorming session for ideas.
 
+## Post-Mortem
+I ended up getting stuck on trying to get rich cli working with inputs
+and live updates. I wrote down pseudo code in my "__main__" function
+to show what the rest of the code would look like.
+
+What I would figure out next is how to handle a separate loop for the
+Playlist management along with the user input selection. This will require async code along with a way to display Playlist Queue data
+while separately handling entering user inputs.
 
 ## Notes
 Initial read through
